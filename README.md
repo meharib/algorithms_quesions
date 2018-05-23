@@ -20,3 +20,15 @@ Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 ```
+
+3. Longest Non-Repeating Substring [Solution](src/main/java/LongestNonRepeatingSubstring.java)
+Given a string, find the length of the longest substring without repeating characters.
+```
+Examples:
+
+Given "abcabcbb", the answer is "abc", which the length is 3.
+
+Given "bbbbb", the answer is "b", with the length of 1.
+
+Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+```
