@@ -9,7 +9,8 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].    
 ```
 
-2. Add Two Numbers [Solution](src/main/java/AddTwoNumbers.java)
+2. Add Two Numbers: [Solution](src/main/java/AddTwoNumbers.java)
+
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
@@ -21,7 +22,8 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 ```
 
-3. Longest Non-Repeating Substring [Solution](src/main/java/LongestNonRepeatingSubstring.java)
+3. Longest Non-Repeating Substring: [Solution](src/main/java/LongestNonRepeatingSubstring.java)
+
 Given a string, find the length of the longest substring without repeating characters.
 ```
 Examples:
