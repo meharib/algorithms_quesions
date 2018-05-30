@@ -55,3 +55,19 @@ nums2 = [3, 4]
 
 The median is (2 + 3)/2 = 2.5
 ```
+
+5. Longest Palindromic Substring <br>
+[Solution](src/main/java/LongestPalindromicSubstring.java)<br>
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.<br>
+
+```
+Example 1:
+
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+Example 2:
+
+Input: "cbbd"
+Output: "bb"
+```
