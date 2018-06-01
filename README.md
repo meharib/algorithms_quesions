@@ -96,7 +96,7 @@ Output: "PINALSIGYAHRPI"
 ```
 
 7. Reverse Integer<br>
-[Solution](src/main/java/ReverseIneger.java)<br>
+[Solution](src/main/java/ReverseInteger.java)<br>
 Given a 32-bit signed integer, reverse digits of an integer. If the reversed integer is above 32 bit return 0.<br>
 
 ```
