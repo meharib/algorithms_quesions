@@ -94,3 +94,14 @@ Input: s = "PAYPALISHIRING", numRows = 4
 Output: "PINALSIGYAHRPI"
 
 ```
+
+7. Reverse Integer<br>
+[Solution](src/main/java/ReverseIneger.java)<br>
+Given a 32-bit signed integer, reverse digits of an integer. If the reversed integer is above 32 bit return 0.<br>
+
+```
+Example 1:
+
+Input: 123
+Output: 321
+```
