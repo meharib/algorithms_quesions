@@ -160,3 +160,31 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
              Thefore INT_MIN (−231) is returned.
 
 ```
+
+10 Check Water Flows - Graph Solution<br>
+Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
+Water can flow in all four directions, North, South, East, West but not diagonal. Deterimine if a water can flow from top row to bottom row.
+```
+Example 1 
+input {{1,0,0,1},
+       {0,0,1,1},
+       {1,0,1,0}}
+output: true
+
+Example 2 
+input {{1,0,0,1},
+       {0,1,0,1},
+       {1,0,1,0}}
+output: false
+```
+[Solution](src/main/java/FlowCheckerWithGraph.java)<br>
+Solution Approach 
+- the problem can be converted to into a graph connectivity.
+- we constract a graph such that
+-  Each element in the matrix can be represented by a vertex
+- from each vertex we add edges(maximum 4) if there are the neighbouring vertices have value 1
+- we add a start vertex at the top and end vertex at the bottom and connect the top and the bottom rows 
+- note that since this is undirected graph we add the edges both ways for the bottom and the two rows 
+-Then we run either breadth first search or, depth first search to check if there is a connectivity between the start and the end vertex
+
+
