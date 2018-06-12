@@ -186,5 +186,42 @@ Solution Approach
 - we add a start vertex at the top and end vertex at the bottom and connect the top and the bottom rows 
 - note that since this is undirected graph we add the edges both ways for the bottom and the two rows 
 -Then we run either breadth first search or, depth first search to check if there is a connectivity between the start and the end vertex
+<br>
+11. Shortest Path from police station to town<br>
+Suppose there are n towns connected by m bidirectional roads. There are s towns among them with a police station. 
+We want to find out the distance of each town from the nearest police station. If the town itself has one the distance is 0.
+Assume that all roads has only a unit distance<br>
+
+```
+Example
+Input : 
+Number of Vertices = 6
+Number of Edges = 9
+Towns with Police Station : 1, 5
+Graph:
+{
+1: {2,6}
+2: {6,3}
+3: {6,4}
+4: {}
+5: {4,3}
+6: {5}
+}
+
+
+Output :
+1 0
+2 1
+3 1
+4 1
+5 0
+6 1
+```
+
+Solution:
+The information can be represented as a graph. Then we can run Dijkstra Algorithm from the vertices that represent the police station.
+Dijkstra requies O(|V|+|E|)log(|V|) time because it uses a priority queue which requires log(|V|) time for lookup.<br>
+[Solution](src/main/java/ShortestPathFromPoliceStation.java)<br>
+
 
 
