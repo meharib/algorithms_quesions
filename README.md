@@ -221,7 +221,16 @@ Output :
 Solution:
 The information can be represented as a graph. Then we can run Dijkstra Algorithm from the vertices that represent the police station.
 Dijkstra requies O(|V|+|E|)log(|V|) time because it uses a priority queue which requires log(|V|) time for lookup.<br>
-[Solution](src/main/java/ShortestPathFromPoliceStation.java)<br>
+[Solution](src/main/java/ShortestPathFromPoliceStation.java) <br>
 
+12 Subset Sum <br>
+Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.
+```
+Examples: set[] = {3, 34, 4, 12, 5, 2}, sum = 9
+Output:  True  //There is a subset (4, 5) with sum 9.
+```
+
+Solution
+[Solution](src/main/java/SubSetSum.java) <br>
 
 
