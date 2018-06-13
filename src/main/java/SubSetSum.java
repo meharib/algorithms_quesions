@@ -8,6 +8,11 @@ public class SubSetSum {
     public boolean subsetSum(int[] input, int sum){
         if(sum==0) return true;
         if(input==null || input.length==0) return false;
+        boolean[][] T = getSubsetSumTable(input,sum);
+        return T[input.length-1][sum];
+    }
+
+    public boolean[][] getSubsetSumTable(int[] input, int sum){
         boolean[][] T = new boolean[input.length][sum+1];
         for (int i = 0; i < input.length; i++) {
             for(int j=0; j<sum+1; j++){
@@ -25,6 +30,6 @@ public class SubSetSum {
             }
 
         }
-        return T[input.length-1][sum];
+        return T;
     }
 }

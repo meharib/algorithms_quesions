@@ -233,4 +233,47 @@ Output:  True  //There is a subset (4, 5) with sum 9.
 Solution
 [Solution](src/main/java/SubSetSum.java) <br>
 
+12 Perfect Subset Sum<br>
+Given an array of integers and a sum, the task is to print all subsets of given array with sum equal to given sum.
+```
+Examples:
+Input : arr[] = {2, 3, 5, 6, 8, 10}
+        sum = 10
+Output : 5 2 3
+         2 8
+         10
+
+Input : arr[] = {1, 2, 3, 4, 5}
+        sum = 10
+Output : 4 3 2 1 
+         5 3 2 
+         5 4 1 
+```
+Solution
+Build the Dynamic Programming Tree first then back trace it
+[Solution](src/main/java/PerfectSum.java) <br>     
+
+13 Valid Path<br>
+There is a rectangle with left bottom as  (0, 0) and right up as (x, y). There are N circles such that their centers are inside the rectangle. 
+Radius of each circle is R. Now we need to find out if it is possible that we can move from (0, 0) to (x, y) without touching any circle.
+Note : We can move from any cell to any of its 8 adjecent neighbours and we cannot move outside the boundary of the rectangle at any point of time.
+   
+   Constraints
+    0 <= x , y , R <= 100  
+    1 <= N <= 1000 
+  
+   Center of each circle would lie within the grid
+   
+   Input
+   Input contains x, y , N , R  and two array of size N containing centers of circles.
+   The ith index of first array contains x co-ordinate of the ith circle and ith index of second array contains the y co-ordinate of the ith circle.
+   
+   Output 
+   YES or NO depending on weather it is possible to reach cell  (x,y) or not starting from (0,0).
+<br>
+Solution
+- Convert the rectangle into a graph
+- Exclude all vertices that are covered by the circle areas
+- Run BFS to see if we can access the end point starting from origin
+[Solution](src/main/java/GraphValidPath.java) <br> 
 
