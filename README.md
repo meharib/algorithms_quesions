@@ -1,4 +1,29 @@
 # Technical Interview Practice Questions And Solutions
+## Backtracking
+10 Check Water Flows - Backtracking Solution<br>
+Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
+Water can flow in all four directions, North, South, East, West but not diagonal. Determine if a water can flow from top row to bottom row.
+```
+Example 1 
+input {{1,0,0,1},
+       {0,0,1,1},
+       {1,0,1,0}}
+output: true
+
+Example 2 
+input {{1,0,0,1},
+       {0,1,0,1},
+       {1,0,1,0}}
+output: false
+```
+[Solution](src/main/java/backtracking/FlowCheckerWithBackTracking.java)<br>
+when recursively exploring all four directions if one the four directions returns true then the caller should return true.
+If all return false, then the caller should return false.
+
+## Dynamics Programming
+## Graph
+## Divide & Concure
+
 1. Two Sums: [Solution](src/main/java/TwoSums.java)
 
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
