@@ -24,10 +24,13 @@ If all return false, then the caller should return false.<br>
 Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so in this case 8 if we exclude empty set it is 7
 
 [Solution](src/main/java/backtracking/PrintAllSubSetsOfASet.java)<br>
+- the main idea is to generate the Power Set. The Power Set is a set that contains all subset of a given set.
 - for each element in the list take the first element and union it with remined of the set<br>
 [Stackoverflow reference](https://stackoverflow.com/questions/4640034/calculating-all-of-the-subsets-of-a-set-of-numbers)<br>
 
-
+3 Subset Sum
+This is an extension of the all subsets problem. Given a set of integers and a target sum. Check if the target can be achieved by adding a subset of the numbers.
+[Solution](src/main/java/backtracking/SubsetSum.java)<br>
 ## Dynamics Programming
 ## Graph
 ## Divide & Concure
