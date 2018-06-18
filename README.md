@@ -31,6 +31,13 @@ Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so 
 3 Subset Sum
 This is an extension of the all subsets problem. Given a set of integers and a target sum. Check if the target can be achieved by adding a subset of the numbers.
 [Solution](src/main/java/backtracking/SubsetSum.java)<br>
+
+4 Construct work from input string array<br>
+Give an input array of strings determine if a word can be constructed from the input array.
+Example: Given {'int', 'bar','er','view'} and 'interview' return true or given {'b','o','k'} and 'book' return true<br>
+[Solution](src/main/java/backtracking/ConstructWordFromInputs.java)<br>
+We build the power set of the given input strings, two tings we do is we only check if the word starts with the given input
+and when we backtrack if one of the backtrack paths returns true then we retrun true.
 ## Dynamics Programming
 ## Graph
 ## Divide & Concure
