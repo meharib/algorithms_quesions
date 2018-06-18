@@ -1,6 +1,6 @@
 # Technical Interview Practice Questions And Solutions
 ## Backtracking
-10 Check Water Flows - Backtracking Solution<br>
+1 Check Water Flows - Backtracking Solution<br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
 Water can flow in all four directions, North, South, East, West but not diagonal. Determine if a water can flow from top row to bottom row.
 ```
@@ -18,7 +18,15 @@ output: false
 ```
 [Solution](src/main/java/backtracking/FlowCheckerWithBackTracking.java)<br>
 when recursively exploring all four directions if one the four directions returns true then the caller should return true.
-If all return false, then the caller should return false.
+If all return false, then the caller should return false.<br>
+
+2 Print All Subsets<br>
+Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so in this case 8 if we exclude empty set it is 7
+
+[Solution](src/main/java/backtracking/PrintAllSubSetsOfASet.java)<br>
+- for each element in the list take the first element and union it with remined of the set<br>
+[Stackoverflow reference](https://stackoverflow.com/questions/4640034/calculating-all-of-the-subsets-of-a-set-of-numbers)<br>
+
 
 ## Dynamics Programming
 ## Graph
