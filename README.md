@@ -39,6 +39,20 @@ Example: Given {'int', 'bar','er','view'} and 'interview' return true or given {
 We build the power set of the given input strings, two tings we do is we only check if the word starts with the given input
 and when we backtrack if one of the backtrack paths returns true then we retrun true.
 ## Dynamics Programming
+### Tree
+1 Binary Search Tree implementation<br>
+The main operations a binary tree needs to have are
+ - insert: 
+ - contains: should be done in O(log n) time.
+ - print in order: print/visit smallest to largest element left->middle->right
+ - print Post order: left ->right -> middle 
+ - print Pre order: middle -> left -> right 
+[Solution](src/main/java/trees/Node.java)<br>
+
+2 Given a sorted array convert it into a balanced binary tree
+[Solution](src/main/java/trees/SortedArrayToTree.java)<br>
+
+ 
 ## Graph
 ## Divide & Concure
 
