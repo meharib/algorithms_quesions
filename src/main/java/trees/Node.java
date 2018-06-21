@@ -4,7 +4,7 @@ package trees;
  * Created by Mehari on 6/19/18.
  */
 public class Node {
-    private int data;
+    public int data;
     public Node left;
     public Node right;
     public Node(int data){

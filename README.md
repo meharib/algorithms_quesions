@@ -52,7 +52,11 @@ The main operations a binary tree needs to have are
 2 Given a sorted array convert it into a balanced binary tree
 [Solution](src/main/java/trees/SortedArrayToTree.java)<br>
 
- 
+3 Given a binary tree find its height<br>
+Solution<br>
+We can do BFS search here and keept track of each level but there is a more simple and elegant solution that works at O(n) time<br>
+[Solution](src/main/java/trees/TreeDepth.java)<br>
+
 ## Graph
 ## Divide & Concure
 
