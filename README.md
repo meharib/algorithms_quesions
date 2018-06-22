@@ -57,6 +57,14 @@ Solution<br>
 We can do BFS search here and keept track of each level but there is a more simple and elegant solution that works at O(n) time<br>
 [Solution](src/main/java/trees/TreeDepth.java)<br>
 
+4 Given a binary tree check if it is a binary search tree or not<br>
+Solution<br>
+There are two approaches. Recursive - notice that the left sub tree should have a maximum element value that is at max the current node value.
+Similary the right sub tree should have a minimum element value that is at minimum the current node value.
+We use these upper and lower limit bounds to recursively check all the elements
+Approch 2 is to simply do in-order traversal and store the result in an array then check the array if all elements in the array are ordered
+[Solution](src/main/java/trees/CheckIfBinaryTreeIsSearchTreeApproachOne.java)<br>
+
 ## Graph
 ## Divide & Concure
 
