@@ -64,7 +64,17 @@ Similary the right sub tree should have a minimum element value that is at minim
 We use these upper and lower limit bounds to recursively check all the elements
 Approch 2 is to simply do in-order traversal and store the result in an array then check the array if all elements in the array are ordered
 [Solution](src/main/java/trees/CheckIfBinaryTreeIsSearchTreeApproachOne.java)<br>
-
+5 Max heap Implementation<br>
+Key properties to remember
+ - the head element is always at index 0
+ - the left of the ith element is found at 2*i
+ - the right of the ith element is found at left element +1
+ - the parent of the ith element is found at i/2
+ - when we enqueue a new element we add it at the last index of the array and we heapify the data upward
+ - when we dequeue an element we replace the element at index 0 with the element that is at the end of the array and we heapify downward.
+ - the heapify method(heapify up or heapfy down ) is the core of this data strcuture. what it does is simply compare the current element to its children(if heapify down) or to its parent (heapify up) and swap them if the value does not match.
+ - the simple rule for heapify Max is the parent should be greater than or equal to its children
+ [Solution](src/main/java/trees/BinaryHeap.java)<br>
 ## Graph
 ## Divide & Concure
 
