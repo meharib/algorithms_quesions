@@ -75,6 +75,27 @@ Key properties to remember
  - the heapify method(heapify up or heapfy down ) is the core of this data strcuture. what it does is simply compare the current element to its children(if heapify down) or to its parent (heapify up) and swap them if the value does not match.
  - the simple rule for heapify Max is the parent should be greater than or equal to its children
  [Solution](src/main/java/trees/BinaryHeap.java)<br>
+
+6 Top View of a Tree
+Given a binary tree print the top view 
+example 
+
+    1
+    \
+     2
+      \
+       5
+      /  \
+     3    6
+      \
+      4
+      
+output: 1 2 5 6  
+Solution<br>
+   - Measure the horizontal distance of each node from the root 
+   - Do a BFS 
+   - print out the result in ascending order of their horizontal distance 
+ [Solution](src/main/java/trees/TopView.java)<br>    
 ## Graph
 ## Divide & Concure
 
