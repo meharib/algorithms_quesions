@@ -96,6 +96,10 @@ Solution<br>
    - Do a BFS 
    - print out the result in ascending order of their horizontal distance 
  [Solution](src/main/java/trees/TopView.java)<br>    
+
+7 Trie Tree implementation
+ [Solution](src/main/java/trees/TrieNode.java)<br> 
+
 ## Graph
 ## Divide & Concure
 
