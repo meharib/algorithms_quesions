@@ -100,6 +100,31 @@ Solution<br>
 7 Trie Tree implementation
  [Solution](src/main/java/trees/TrieNode.java)<br> 
 
+8 Trie Tree Prefix
+Given  strings. Each string contains only lowercase letters. The set of  strings is said to be GOOD SET if no string is prefix of another string else, 
+it is BAD SET. (If two strings are identical, they are considered prefixes of each other.)
+
+return null if it is a  GOOD SET that satisfies the problem requirement. 
+Else, return the first string for which the condition fails if it is a BAD SET.
+```
+Example
+input: {aab, defgab, abcde, aabcde, cedaaa, bbbbbbbbbb, jabjjjad}
+output: aabcde
+
+
+input: {aab,aac,aacghgh,aabghgh}
+output: aacghgh
+Explanation 
+aab is prefix of aabcde. So set is BAD SET and it fails at string aabcde.
+```
+
+Solution<br>
+Use Trie Tree to keep track of the prefix, there are two conditions to check.
+- if there exists a word(with the isEnd flag turned on) that matches the current word that is getting inserted, return the current word
+- If the current word that is getting inserted can be a prefix to a previously inserted word, return the current word
+
+[Solution](src/main/java/trees/TrieTreePrefixSet.java)<br> 
+
 ## Graph
 ## Divide & Concure
 
