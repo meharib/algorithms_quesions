@@ -417,3 +417,17 @@ Output: John (27), Kris (36)
 
 [Solution](src/main/java/unionfind/BabyNames.java) <br>
 
+##Miscellaneous<br>
+1 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
+  Come up with an asymptotically optimal solution and analyze the time and space complexities.<br>
+  
+```
+  Example:
+  input:  arr = ['x','y','z'], str = "xyyzyzyx"
+  output: "zyx"
+ 
+```
+Solution
+  - use map to keep track of characters that are already found. 
+  - it is possible that a single character can exists multiple times in the input array
+  - the order in which the character are found in the substring does not matter
