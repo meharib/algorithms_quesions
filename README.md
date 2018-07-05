@@ -417,6 +417,10 @@ Output: John (27), Kris (36)
 
 [Solution](src/main/java/unionfind/BabyNames.java) <br>
 
+##Sorting<br>
+1 Implement Quick Sort
+[Solution](src/main/java/sorting/QuickSort.java) <br>
+
 ##Miscellaneous<br>
 1 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
   Come up with an asymptotically optimal solution and analyze the time and space complexities.<br>
