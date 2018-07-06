@@ -421,6 +421,25 @@ Output: John (27), Kris (36)
 1 Implement Quick Sort
 [Solution](src/main/java/sorting/QuickSort.java) <br>
 
+2 Interval Sorting<br>
+Given a collection of intervals, merge all overlapping intervals.
+```
+Example 1:
+
+Input: [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+Example 2:
+
+Input: [[1,4],[4,5]]
+Output: [[1,5]]
+Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
+```
+
+Solution<br>
+First sort the intervals by their start, then starting from the first interval try to merge them
+[Solution](src/main/java/sorting/IntervalSorting.java) <br>
+
 ##Miscellaneous<br>
 1 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
   Come up with an asymptotically optimal solution and analyze the time and space complexities.<br>
@@ -435,3 +454,4 @@ Solution
   - use map to keep track of characters that are already found. 
   - it is possible that a single character can exists multiple times in the input array
   - the order in which the character are found in the substring does not matter
+[Solution](src/main/java/miscellaneous/SmallestSubStringOfChars.java) <br>
