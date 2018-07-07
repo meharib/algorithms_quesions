@@ -1,6 +1,6 @@
 # Technical Interview Practice Questions And Solutions
 ## Backtracking
-1 Check Water Flows - Backtracking Solution<br>
+<b>1 Check Water Flows - Backtracking Solution</b><br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
 Water can flow in all four directions, North, South, East, West but not diagonal. Determine if a water can flow from top row to bottom row.
 ```
@@ -20,7 +20,7 @@ output: false
 when recursively exploring all four directions if one the four directions returns true then the caller should return true.
 If all return false, then the caller should return false.<br>
 
-2 Print All Subsets<br>
+<b>2 Print All Subsets</b><br>
 Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so in this case 8 if we exclude empty set it is 7
 
 [Solution](src/main/java/backtracking/PrintAllSubSetsOfASet.java)<br>
@@ -28,11 +28,11 @@ Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so 
 - for each element in the list take the first element and union it with remined of the set<br>
 [Stackoverflow reference](https://stackoverflow.com/questions/4640034/calculating-all-of-the-subsets-of-a-set-of-numbers)<br>
 
-3 Subset Sum
+<b>3 Subset Sum</b>
 This is an extension of the all subsets problem. Given a set of integers and a target sum. Check if the target can be achieved by adding a subset of the numbers.
 [Solution](src/main/java/backtracking/SubsetSum.java)<br>
 
-4 Construct work from input string array<br>
+<b>4 Construct work from input string array</b><br>
 Give an input array of strings determine if a word can be constructed from the input array.
 Example: Given {'int', 'bar','er','view'} and 'interview' return true or given {'b','o','k'} and 'book' return true<br>
 [Solution](src/main/java/backtracking/ConstructWordFromInputs.java)<br>
@@ -40,7 +40,7 @@ We build the power set of the given input strings, two tings we do is we only ch
 and when we backtrack if one of the backtrack paths returns true then we retrun true.
 ## Dynamics Programming
 ### Tree
-1 Binary Search Tree implementation<br>
+<b>1 Binary Search Tree implementation</b><br>
 The main operations a binary tree needs to have are
  - insert: 
  - contains: should be done in O(log n) time.
@@ -49,22 +49,22 @@ The main operations a binary tree needs to have are
  - print Pre order: middle -> left -> right 
 [Solution](src/main/java/trees/Node.java)<br>
 
-2 Given a sorted array convert it into a balanced binary tree
+<b>2 Given a sorted array convert it into a balanced binary tree</b>
 [Solution](src/main/java/trees/SortedArrayToTree.java)<br>
 
-3 Given a binary tree find its height<br>
+<b>3 Given a binary tree find its height</b><br>
 Solution<br>
 We can do BFS search here and keept track of each level but there is a more simple and elegant solution that works at O(n) time<br>
 [Solution](src/main/java/trees/TreeDepth.java)<br>
 
-4 Given a binary tree check if it is a binary search tree or not<br>
+<b>4 Given a binary tree check if it is a binary search tree or not</b><br>
 Solution<br>
 There are two approaches. Recursive - notice that the left sub tree should have a maximum element value that is at max the current node value.
 Similary the right sub tree should have a minimum element value that is at minimum the current node value.
 We use these upper and lower limit bounds to recursively check all the elements
 Approch 2 is to simply do in-order traversal and store the result in an array then check the array if all elements in the array are ordered
 [Solution](src/main/java/trees/CheckIfBinaryTreeIsSearchTreeApproachOne.java)<br>
-5 Max heap Implementation<br>
+<b>5 Max heap Implementation</b><br>
 Key properties to remember
  - the head element is always at index 0
  - the left of the ith element is found at 2*i
@@ -76,7 +76,7 @@ Key properties to remember
  - the simple rule for heapify Max is the parent should be greater than or equal to its children
  [Solution](src/main/java/trees/BinaryHeap.java)<br>
 
-6 Top View of a Tree
+<b>6 Top View of a Tree</b>
 Given a binary tree print the top view 
 example 
 
@@ -97,10 +97,10 @@ Solution<br>
    - print out the result in ascending order of their horizontal distance 
  [Solution](src/main/java/trees/TopView.java)<br>    
 
-7 Trie Tree implementation
+<b>7 Trie Tree implementation</b>
  [Solution](src/main/java/trees/TrieNode.java)<br> 
 
-8 Trie Tree Prefix
+<b>8 Trie Tree Prefix</b>
 Given  strings. Each string contains only lowercase letters. The set of  strings is said to be GOOD SET if no string is prefix of another string else, 
 it is BAD SET. (If two strings are identical, they are considered prefixes of each other.)
 
