@@ -440,6 +440,13 @@ Solution<br>
 First sort the intervals by their start, then starting from the first interval try to merge them
 [Solution](src/main/java/sorting/IntervalSorting.java) <br>
 
+##Searching<br>
+1 Given a sorted matrix and a number verify if the number exists.
+Solution<br>
+- Treat the matrix like a single array and do binary search to find the element.
+- given the position of the element it is possible to decode it into i,j position on the matrix
+<br>
+[Solution](src/main/java/searching/SearchSortedMatrix.java) <br>
 ##Miscellaneous<br>
 1 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
   Come up with an asymptotically optimal solution and analyze the time and space complexities.<br>
