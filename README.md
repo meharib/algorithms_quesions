@@ -1,4 +1,7 @@
 # Technical Interview Practice Questions<br/>
+- [What is it?](#what-is-it)
+- [Why use it?](#why-use-it)
+- [How to use it](#how-to-use-it)
 
 - [Backtracking](##backtracking)
     - [Check Water Flows](###1-check-water-flow)
@@ -70,6 +73,13 @@ output: false
 [Solution](src/main/java/backtracking/FlowCheckerWithBackTracking.java)<br>
 when recursively exploring all four directions if one the four directions returns true then the caller should return true.
 If all return false, then the caller should return false.<br>
+
+## Why use it?
+
+Why use it content goes here
+## How to use it
+
+How to use it content goes here
 
 ### 2 Print All Subsets<br>
 Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so in this case 8 if we exclude empty set it is 7
