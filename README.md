@@ -47,16 +47,6 @@
     - [Reverse Integer](###5-reverse-integer)
     - [Shortest Palindrome](###6-shortest-palindrome)
     - [String to Number - atoi](###7-string-to-number---atoi)
-
- 
-
-
-
-
-
-
-
-## Why use it?
 ## Backtracking
 ### 1 Check Water Flow <br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
@@ -78,7 +68,7 @@ output: false
 when recursively exploring all four directions if one the four directions returns true then the caller should return true.
 If all return false, then the caller should return false.<br>
 
-###2 Print All Subsets<br>
+### 2 Print All Subsets<br>
 Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so in this case 8 if we exclude empty set it is 7
 
 [Solution](src/main/java/backtracking/PrintAllSubSetsOfASet.java)<br>
@@ -86,19 +76,19 @@ Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so 
 - for each element in the list take the first element and union it with remined of the set<br>
 [Stackoverflow reference](https://stackoverflow.com/questions/4640034/calculating-all-of-the-subsets-of-a-set-of-numbers)<br>
 
-###3 Subset Sum</b>
+### 3 Subset Sum</b>
 This is an extension of the all subsets problem. Given a set of integers and a target sum. Check if the target can be achieved by adding a subset of the numbers.
 [Solution](src/main/java/backtracking/SubsetSum.java)<br>
 
-###4 Construct word from input string array<br>
+### 4 Construct word from input string array<br>
 Give an input array of strings determine if a word can be constructed from the input array.
 Example: Given {'int', 'bar','er','view'} and 'interview' return true or given {'b','o','k'} and 'book' return true<br>
 [Solution](src/main/java/backtracking/ConstructWordFromInputs.java)<br>
 We build the power set of the given input strings, two tings we do is we only check if the word starts with the given input
 and when we backtrack if one of the backtrack paths returns true then we retrun true.
 
-##Dynamic Programming<br>
-###1 Longest Non Repeating Substring<br>
+## Dynamic Programming<br>
+### 1 Longest Non Repeating Substring<br>
 
 Given a string, find the length of the longest substring without repeating characters.
 ```
@@ -133,7 +123,7 @@ nums2 = [3, 4]
 
 The median is (2 + 3)/2 = 2.5
 ```
-###3 Longest Palindromic Substring <br>
+### 3 Longest Palindromic Substring <br>
 [Solution](src/main/java/LongestPalindromicSubstring.java)<br>
 Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.<br>
 
@@ -148,7 +138,7 @@ Example 2:
 Input: "cbbd"
 Output: "bb"
 ```
-###4 Subset Sum <br>
+### 4 Subset Sum <br>
 Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.
 ```
 Examples: set[] = {3, 34, 4, 12, 5, 2}, sum = 9
@@ -178,7 +168,7 @@ Solution
 Build the Dynamic Programming Tree first then back trace it
 [Solution](src/main/java/PerfectSum.java) <br>  
 ## Tree
-###1 Binary Search Tree implementation<br>
+### 1 Binary Search Tree implementation<br>
 The main operations a binary tree needs to have are
  - insert: 
  - contains: should be done in O(log n) time.
@@ -187,15 +177,15 @@ The main operations a binary tree needs to have are
  - print Pre order: middle -> left -> right 
 [Solution](src/main/java/trees/Node.java)<br>
 
-###2 Sorted Array To Binary Tree</b>
+### 2 Sorted Array To Binary Tree</b>
 [Solution](src/main/java/trees/SortedArrayToTree.java)<br>
 
-###3 Height of A Tree</b><br>
+### 3 Height of A Tree</b><br>
 Solution<br>
 We can do BFS search here and keep track of each level but there is a more simple and elegant recursive solution that works at O(n) time.<br>
 [Solution](src/main/java/trees/TreeDepth.java)<br>
 
-###4 Check if it binary tree is search tree<br>
+### 4 Check if it binary tree is search tree<br>
 Solution<br>
 There are two approaches. Recursive - notice that the left sub tree should have a maximum element value that is at max the current node value.
 Similary the right sub tree should have a minimum element value that is at minimum the current node value.
@@ -203,7 +193,7 @@ We use these upper and lower limit bounds to recursively check all the elements
 Approch 2 is to simply do in-order traversal and store the result in an array then check the array if all elements in the array are ordered
 [Solution](src/main/java/trees/CheckIfBinaryTreeIsSearchTreeApproachOne.java)<br>
 
-###5 Max heap Implementation<br>
+### 5 Max heap Implementation<br>
 Key properties to remember
  - the head element is always at index 0
  - the left of the ith element is found at 2*i
@@ -215,7 +205,7 @@ Key properties to remember
  - the simple rule for heapify Max is the parent should be greater than or equal to its children
  [Solution](src/main/java/trees/BinaryHeap.java)<br>
 
-###6 Top View of a Tree</b>
+### 6 Top View of a Tree</b>
 Given a binary tree print the top view 
 example 
 
@@ -236,10 +226,10 @@ Solution<br>
    - print out the result in ascending order of their horizontal distance 
  [Solution](src/main/java/trees/TopView.java)<br>    
 
-###7 Trie Tree implementation</b>
+### 7 Trie Tree implementation</b>
  [Solution](src/main/java/trees/TrieNode.java)<br> 
 
-###8 Trie Tree Prefix</b>
+### 8 Trie Tree Prefix</b>
 Given  strings. Each string contains only lowercase letters. The set of  strings is said to be GOOD SET if no string is prefix of another string else, 
 it is BAD SET. (If two strings are identical, they are considered prefixes of each other.)
 
@@ -265,7 +255,7 @@ Use Trie Tree to keep track of the prefix, there are two conditions to check.
 [Solution](src/main/java/trees/TrieTreePrefixSet.java)<br> 
 
 ## Graph
-###1 Check Water Flows - Graph Solution<br>
+### 1 Check Water Flows - Graph Solution<br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
 Water can flow in all four directions, North, South, East, West but not diagonal. Deterimine if a water can flow from top row to bottom row.
 ```
@@ -292,7 +282,7 @@ Solution Approach
 -Then we run either breadth first search or, depth first search to check if there is a connectivity between the start and the end vertex
 <br>
 
-###2 Shortest Path from police station to town<br>
+### 2 Shortest Path from police station to town<br>
 Suppose there are n towns connected by m bidirectional roads. There are s towns among them with a police station. 
 We want to find out the distance of each town from the nearest police station. If the town itself has one the distance is 0.
 Assume that all roads has only a unit distance<br>
@@ -328,7 +318,7 @@ The information can be represented as a graph. Then we can run Dijkstra Algorith
 Dijkstra requies O(|V|+|E|)log(|V|) time because it uses a priority queue which requires log(|V|) time for lookup.<br>
 [Solution](src/main/java/ShortestPathFromPoliceStation.java) <br>
 
-###3 Valid Path<br>
+### 3 Valid Path<br>
 There is a rectangle with left bottom as  (0, 0) and right up as (x, y). There are N circles such that their centers are inside the rectangle. 
 Radius of each circle is R. Now we need to find out if it is possible that we can move from (0, 0) to (x, y) without touching any circle.
 Note : We can move from any cell to any of its 8 adjecent neighbours and we cannot move outside the boundary of the rectangle at any point of time.
@@ -353,8 +343,8 @@ Solution
 [Solution](src/main/java/GraphValidPath.java) <br> 
 
 
-##Union find<br>
-###1 Baby Names<br>
+## Union find<br>
+### 1 Baby Names<br>
 Each year, the government releases a list of the 10000 most common baby names and their frequencies (the number of babies with that name). The only problem with this is that some names have multiple spellings. For example, "John" and "Jon" are essentially the same name but would be listed separately in the list. Given two lists, one of names/frequencies and the other of pairs of equivalent names, write an algorithm to print a new list of the true frequency of each name. Note that if John and Jon are synonyms, and Jon and Johnny are synonyms, then John and Johnny are synonyms. (It is both transitive and symmetric.) In the final list, any name can be used as the "real " name.
 EXAMPLE
 Input:
@@ -365,11 +355,11 @@ Output: John (27), Kris (36)
 [Solution](src/main/java/unionfind/BabyNames.java) <br>
 
 
-##Sorting<br>
-###1 Implement Quick Sort
+## Sorting<br>
+### 1 Implement Quick Sort
 [Solution](src/main/java/sorting/QuickSort.java) <br>
 
-###2 Interval Sorting<br>
+### 2 Interval Sorting<br>
 Given a collection of intervals, merge all overlapping intervals.
 ```
 Example 1:
@@ -388,19 +378,19 @@ Solution<br>
 First sort the intervals by their start, then starting from the first interval try to merge them
 [Solution](src/main/java/sorting/IntervalSorting.java) <br>
 
-###3 Pancake Sorting
-###4 Bubble Sorting
+### 3 Pancake Sorting
+### 4 Bubble Sorting
 
-##Searching<br>
-###1 Given a sorted matrix and a number verify if the number exists
+## Searching<br>
+### 1 Given a sorted matrix and a number verify if the number exists
 Solution<br>
 - Treat the matrix like a single array and do binary search to find the element.
 - given the position of the element it is possible to decode it into i,j position on the matrix
 <br>
 [Solution](src/main/java/searching/SearchSortedMatrix.java) <br>
 
-##Miscellaneous<br>
-###1 Shortest Unique Substring
+## Miscellaneous<br>
+### 1 Shortest Unique Substring
 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
 Come up with an asymptotically optimal solution and analyze the time and space complexities.<br>
   
@@ -416,7 +406,7 @@ Solution
   - the order in which the character are found in the substring does not matter
 [Solution](src/main/java/miscellaneous/SmallestSubStringOfChars.java) <br>
 
-###2 Two Sums 
+### 2 Two Sums 
 
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -426,7 +416,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].    
 ```
 [Solution](src/main/java/TwoSums.java)<br>
-###3 Add Two Numbers
+### 3 Add Two Numbers
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
@@ -440,7 +430,7 @@ Explanation: 342 + 465 = 807.
 ```
 <br>
 [Solution](src/main/java/AddTwoNumbers.java)<br>
-###4 Zigzag pattern <br>
+### 4 Zigzag pattern <br>
 [Solution](src/main/java/ZigZagConversion.java)<br>
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 ```
@@ -463,7 +453,7 @@ Output: "PINALSIGYAHRPI"
 
 ```
 <br>
-###5 Reverse Integer<br>
+### 5 Reverse Integer<br>
 [Solution](src/main/java/ReverseInteger.java)<br>
 Given a 32-bit signed integer, reverse digits of an integer. If the reversed integer is above 32 bit return 0.<br>
 
@@ -473,7 +463,7 @@ Example 1:
 Input: 123
 Output: 321
 ```
-###6 Shortest Palindrome<br>
+### 6 Shortest Palindrome<br>
 [Solution](src/main/java/ShortestPalindrome.java)<br>
 Given a string s, you are allowed to convert it to a palindrome by adding characters in front of it. Find and return the shortest palindrome you can find by performing this transformation<br>
 
@@ -488,7 +478,7 @@ Input: "abcd"
 Output: "dcbabcd"
 ```
 
-###7 String to Number - atoi<br>
+### 7 String to Number - atoi<br>
 [Solution](src/main/java/StringToNumber.java)<br>
 Implement atoi which converts a string to an integer.<br>
 - discard all whitespace characters until the first non-whitespace charater
