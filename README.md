@@ -3,7 +3,7 @@
 - [Why use it?](#why-use-it)
 - [How to use it](#how-to-use-it)
 
-- [Backtracking](##backtracking)
+- [Backtracking](#backtracking)
     - [Check Water Flows](###1-check-water-flow)
     - [Print All Subsets](###2-print-all-subsets)
     - [Subset Sum](###3-subset-sum)
