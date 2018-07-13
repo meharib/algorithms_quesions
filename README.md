@@ -1,5 +1,5 @@
 # Technical Interview Practice Questions<br/>
-
+- [What is it?](#what-is-it)
 - [Backtracking](##backtracking)
     - [Check Water Flows](###1-check-water-flow)
     - [Print All Subsets](###2-print-all-subsets)
@@ -56,7 +56,7 @@
 
 
 
-
+## Why use it?
 ## Backtracking
 ### 1 Check Water Flow <br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
