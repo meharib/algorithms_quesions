@@ -1,12 +1,9 @@
 # Technical Interview Practice Questions<br/>
-- [What is it?](#what-is-it)
-- [Why use it?](#why-use-it)
-- [How to use it](#how-to-use-it)
 
 - [Backtracking](#backtracking)
-    - [Check Water Flows](###1-check-water-flow)
-    - [Print All Subsets](###2-print-all-subsets)
-    - [Subset Sum](###3-subset-sum)
+    - [Check Water Flows](#1-check-water-flow)
+    - [Print All Subsets](#2-print-all-subsets)
+    - [Subset Sum](#3-subset-sum)
 - [Dynamic Programming](##dynamic-programming)
 
 - [Tree](##tree)
