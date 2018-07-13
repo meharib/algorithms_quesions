@@ -1,5 +1,5 @@
 # Technical Interview Practice Questions<br/>
-- [What is it?](#what-is-it)
+
 - [Backtracking](##backtracking)
     - [Check Water Flows](###1-check-water-flow)
     - [Print All Subsets](###2-print-all-subsets)
@@ -47,10 +47,12 @@
     - [Reverse Integer](###5-reverse-integer)
     - [Shortest Palindrome](###6-shortest-palindrome)
     - [String to Number - atoi](###7-string-to-number---atoi)
+
 ## Backtracking
 ### 1 Check Water Flow <br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
 Water can flow in all four directions, North, South, East, West but not diagonal. Determine if a water can flow from top row to bottom row.
+
 ```
 Example 1 
 input {{1,0,0,1},
@@ -64,6 +66,7 @@ input {{1,0,0,1},
        {1,0,1,0}}
 output: false
 ```
+
 [Solution](src/main/java/backtracking/FlowCheckerWithBackTracking.java)<br>
 when recursively exploring all four directions if one the four directions returns true then the caller should return true.
 If all return false, then the caller should return false.<br>
@@ -103,7 +106,7 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
 <br>
 [Solution](src/main/java/LongestNonRepeatingSubstring.java)<br>
 
-###2 Median of two sorted Arrays<br>
+### 2 Median of two sorted Arrays<br>
 [Solution](src/main/java/SortedArraysMedian.java)<br>
 [Code Credit](https://github.com/mission-peace/interview/blob/master/src/com/interview/binarysearch/MedianOfTwoSortedArrayOfDifferentLength.java)<br>
 [Youtube explanation](https://www.youtube.com/watch?v=LPFhl65R7ww)<br>
@@ -148,7 +151,7 @@ Output:  True  //There is a subset (4, 5) with sum 9.
 Solution
 [Solution](src/main/java/SubSetSum.java) <br>
 
-###5 Perfect Subset Sum<br>
+### 5 Perfect Subset Sum<br>
 Given an array of integers and a sum, the task is to print all subsets of given array with sum equal to given sum.
 ```
 Examples:
@@ -206,7 +209,8 @@ Key properties to remember
  [Solution](src/main/java/trees/BinaryHeap.java)<br>
 
 ### 6 Top View of a Tree</b>
-Given a binary tree print the top view 
+Given a binary tree print the top view
+ ```
 example 
 
     1
@@ -218,7 +222,7 @@ example
      3    6
       \
       4
-      
+ ```     
 output: 1 2 5 6  
 Solution<br>
    - Measure the horizontal distance of each node from the root 
@@ -433,6 +437,7 @@ Explanation: 342 + 465 = 807.
 ### 4 Zigzag pattern <br>
 [Solution](src/main/java/ZigZagConversion.java)<br>
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+
 ```
 P       A       H      N
 A   P   L   S   I   I  G
@@ -452,7 +457,7 @@ Input: s = "PAYPALISHIRING", numRows = 4
 Output: "PINALSIGYAHRPI"
 
 ```
-<br>
+
 ### 5 Reverse Integer<br>
 [Solution](src/main/java/ReverseInteger.java)<br>
 Given a 32-bit signed integer, reverse digits of an integer. If the reversed integer is above 32 bit return 0.<br>
@@ -463,6 +468,7 @@ Example 1:
 Input: 123
 Output: 321
 ```
+
 ### 6 Shortest Palindrome<br>
 [Solution](src/main/java/ShortestPalindrome.java)<br>
 Given a string s, you are allowed to convert it to a palindrome by adding characters in front of it. Find and return the shortest palindrome you can find by performing this transformation<br>
