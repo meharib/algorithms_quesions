@@ -121,7 +121,7 @@ nums2 = [3, 4]
 
 The median is (2 + 3)/2 = 2.5
 ```
-### 3 Longest Palindromic Substring <br>
+### 3 Longest Palindromic Substring<br>
 [Solution](src/main/java/LongestPalindromicSubstring.java)<br>
 Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.<br>
 
@@ -378,6 +378,17 @@ First sort the intervals by their start, then starting from the first interval t
 [Solution](src/main/java/sorting/IntervalSorting.java) <br>
 
 ### 3 Pancake Sorting
+Write a function flip(arr, k) that reverses the order of the first k elements in the array arr.
+Write a function pancakeSort(arr) that sorts and returns the input array. 
+You are allowed to use only the function flip you wrote in the first step in order to make changes in the array.
+
+Solution
+- scan through the array elements and find the largest element
+- flip the array to put the largest element at the front of the element
+- fip the array again to put it at the right position in the array
+- repeat this step until all elements are sorted
+[Solution](src/main/java/sorting/PancakeSort.java)<br>
+
 ### 4 Bubble Sorting
 Bubble sort implementation
 - swap neighbouring elements if they are not inorder
