@@ -32,21 +32,21 @@
     - [Subset Sum](#3-subset-sum)
     - [Construct word from input string array](#4-construct-word-from-input-string-array)
 - [Dynamic Programming](#dynamic-programming)
-    - [Longest Non-Repeating Substring](###1-longest-non-repeating-substring)
-    - [Median of two sorted Arrays](###2-median-of-two-sorted-arrays)
-    - [Longest Palindromic Substring](###3-longest-palindromic-substring)
-    - [Subset Sum](###4-subset-sum)
-    - [Perfect Subset Sum](###5-perfect-subset-sum)
-- [Searching](##searching)
+    - [Longest Non-Repeating Substring](#1-longest-non-repeating-substring)
+    - [Median of two sorted Arrays](#2-median-of-two-sorted-arrays)
+    - [Longest Palindromic Substring](#3-longest-palindromic-substring)
+    - [Subset Sum](#4-subset-sum)
+    - [Perfect Subset Sum](#5-perfect-subset-sum)
+- [Searching](#searching)
     - [Given a sorted matrix and a number verify if the number exists](###1-given-a-sorted-matrix-and-a-number-verify-if-the-number-exists)
-- [Miscellaneous](##miscellaneous)
-    - [Shortest Unique Substring](###1-shortest-unique-substring)
-    - [Two Sums](###2-two-sums)
-    - [Add Two Numbers](###3-add-two-numbers)
-    - [Zigzag pattern](###4-zigzag-pattern)
-    - [Reverse Integer](###5-reverse-integer)
-    - [Shortest Palindrome](###6-shortest-palindrome)
-    - [String to Number - atoi](###7-string-to-number---atoi)
+- [Miscellaneous](#miscellaneous)
+    - [Shortest Unique Substring](#1-shortest-unique-substring)
+    - [Two Sums](#2-two-sums)
+    - [Add Two Numbers](#3-add-two-numbers)
+    - [Zigzag pattern](#4-zigzag-pattern)
+    - [Reverse Integer](#5-reverse-integer)
+    - [Shortest Palindrome](#6-shortest-palindrome)
+    - [String to Number - atoi](#7-string-to-number---atoi)
 
 ## Backtracking
 ### 1 Check Water Flow <br>
@@ -70,13 +70,6 @@ output: false
 [Solution](src/main/java/backtracking/FlowCheckerWithBackTracking.java)<br>
 when recursively exploring all four directions if one the four directions returns true then the caller should return true.
 If all return false, then the caller should return false.<br>
-
-## Why use it?
-
-Why use it content goes here
-## How to use it
-
-How to use it content goes here
 
 ### 2 Print All Subsets<br>
 Give a set like {"a", "b", "c"} print all possible subsets the number is 2^n so in this case 8 if we exclude empty set it is 7
