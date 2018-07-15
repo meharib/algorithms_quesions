@@ -1,11 +1,16 @@
 # Technical Interview Practice Questions<br/>
 
 - [Backtracking](#backtracking)
-    - [Check Water Flows](#1-check-water-flow)
+    - [Check Water Flow](#1-check-water-flow)
     - [Print All Subsets](#2-print-all-subsets)
     - [Subset Sum](#3-subset-sum)
+    - [Construct word from input string array](#4-construct-word-from-input-string-array)
 - [Dynamic Programming](#dynamic-programming)
-
+    - [Longest Non-Repeating Substring](#1-longest-non-repeating-substring)
+    - [Median of two sorted Arrays](#2-median-of-two-sorted-arrays)
+    - [Longest Palindromic Substring](#3-longest-palindromic-substring)
+    - [Subset Sum](#4-subset-sum)
+    - [Perfect Subset Sum](#5-perfect-subset-sum)
 - [Tree](#tree)
     - [Binary Search Tree Implementation](#1-binary-search-tree-implementation)
     - [Sorted Array To Binary Tree](#2-sorted-array-to-binary-tree)
@@ -26,17 +31,6 @@
     - [Interval Sorting](#2-interval-sorting)
     - [Pancake Sorting](#3-pancake-sorting)
     - [Bubble Sorting](#4-bubble-sorting)
-- [Backtracking](#backtracking)
-    - [Check Water Flow](#-1-check-water-flow)
-    - [Print All Subsets](#2-print-all-subsets)
-    - [Subset Sum](#3-subset-sum)
-    - [Construct word from input string array](#4-construct-word-from-input-string-array)
-- [Dynamic Programming](#dynamic-programming)
-    - [Longest Non-Repeating Substring](#1-longest-non-repeating-substring)
-    - [Median of two sorted Arrays](#2-median-of-two-sorted-arrays)
-    - [Longest Palindromic Substring](#3-longest-palindromic-substring)
-    - [Subset Sum](#4-subset-sum)
-    - [Perfect Subset Sum](#5-perfect-subset-sum)
 - [Searching](#searching)
     - [Given a sorted matrix and a number verify if the number exists](###1-given-a-sorted-matrix-and-a-number-verify-if-the-number-exists)
 - [Miscellaneous](#miscellaneous)
@@ -49,7 +43,8 @@
     - [String to Number - atoi](#7-string-to-number---atoi)
 
 ## Backtracking
-### 1 Check Water Flow <br>
+
+### 1 Check Water Flow<br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
 Water can flow in all four directions, North, South, East, West but not diagonal. Determine if a water can flow from top row to bottom row.
 
@@ -384,6 +379,10 @@ First sort the intervals by their start, then starting from the first interval t
 
 ### 3 Pancake Sorting
 ### 4 Bubble Sorting
+Bubble sort implementation
+- swap neighbouring elements if they are not inorder
+- repeat this until all elements are ordered
+[Solution](src/main/java/sorting/BubbleSort.java)
 
 ## Searching<br>
 ### 1 Given a sorted matrix and a number verify if the number exists
