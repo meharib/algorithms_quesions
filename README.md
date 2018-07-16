@@ -33,6 +33,7 @@
     - [Bubble Sorting](#4-bubble-sorting)
 - [Searching](#searching)
     - [Given a sorted matrix and a number verify if the number exists](###1-given-a-sorted-matrix-and-a-number-verify-if-the-number-exists)
+    - [Find Duplicates](#2-find-duplicates)
 - [Miscellaneous](#miscellaneous)
     - [Shortest Unique Substring](#1-shortest-unique-substring)
     - [Two Sums](#2-two-sums)
@@ -403,6 +404,22 @@ Solution<br>
 <br>
 [Solution](src/main/java/searching/SearchSortedMatrix.java) <br>
 
+### 2 Find duplicates
+Given two sorted arrays arr1 and arr2 of integers, 
+implement a function findDuplicates that returns an array of numbers that are both in arr1 and arr2. 
+Note that the output array should be sorted in an ascending order.
+Solution:
+- option 1: 
+    - pick the smallest array in size
+    - iterate over each element of the small array and do a binary search on the larger array
+    - running time is o(n log(m))
+-option 2:
+    - use two counters i and j for both arrays starting from 0
+    - if the element at the index i and j are the same increament both i and j
+    - if the element at i is less than j increment i only
+    - if the element at j is less increment only j
+    - running time is o(n + m)
+[Solution](src/main/java/searching/FindDuplicates.java) <br>    
 ## Miscellaneous<br>
 ### 1 Shortest Unique Substring
 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
