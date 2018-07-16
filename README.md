@@ -20,6 +20,7 @@
     - [Top View of a tree](#6-top-view-of-a-tree)
     - [Trie tree implementation](#7-trie-tree-implementation)
     - [Trie tree prefix](#8-trie-tree-prefix)
+    - [Largest Smaller BST Key](#9-largest-smaller-bst-key)
 - [Graph](#graph) 
     - [Check Water Flows](#1-check-water-flows---graph-solution)
     - [Shortest Path](#2-shortest-path-from-police-station-to-town)
@@ -254,6 +255,18 @@ Use Trie Tree to keep track of the prefix, there are two conditions to check.
 
 [Solution](src/main/java/trees/TrieTreePrefixSet.java)<br> 
 
+### 9 Largest Smaller BST Key
+Given a root of a Binary Search Tree (BST) and a number num, 
+implement an efficient function findLargestSmallerKey that finds the largest key in the tree 
+that is smaller than num. If such a number doesn’t exist, return -1. 
+Assume that all keys in the tree are nonnegative.
+
+Solution
+    - we can use a recursive solution or a while loop
+    - start with the root node, if the node value is greater than the number look for the left side
+    - if the node value is smaller than the number and the right side of the node is not null and smaller than the number make a recursive call
+    - the base case is if the node is small and the next node is greater than the number or null
+    [Solution](src/main/java/trees/LargestSmallerBSTKey.java)<br> 
 ## Graph
 ### 1 Check Water Flows - Graph Solution<br>
 Given a matrix array that contains only 0,1 to represent a set of pipes. 1 represent water can flow through 0 represent pipe is blocked.
