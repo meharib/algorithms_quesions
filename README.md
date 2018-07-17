@@ -146,6 +146,11 @@ Output:  True  //There is a subset (4, 5) with sum 9.
 ```
 
 Solution
+    - we can use dynamic programming to solve this in O(n*m) time
+    - i will be a counter for the set x
+    - j will be a counter for the range 1 to target number
+    - base case T[0,j] = false;
+    - T[i,j] = true if x[i]==j || T[i, j-x[i]] false otherwise
 [Solution](src/main/java/SubSetSum.java) <br>
 
 ### 5 Perfect Subset Sum<br>
