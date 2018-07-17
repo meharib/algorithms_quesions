@@ -457,14 +457,24 @@ Solution
 
 ### 2 Two Sums 
 
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+Given an array of integers, return the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 ```Example:
 Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].    
+return [2, 7].    
 ```
 [Solution](src/main/java/TwoSums.java)<br>
+Option 1:
+    - use a Hash to store the difference of the current element and the sum
+    - when adding to the HashMap we check if the element already exits, if it does that means we have found a sum.
+    - time complexity o(n) and space complexity is O(n)
+Option 2:
+    - sort the array
+    - use a sliding window counter from the start and the end of the array
+    - if the sum of the numbers at the two indexes are greater increase the left index otherwise decrease the right index
+    - time complexity sorting O(nlogn) find the sum O(n) space constant
+    - this option is effective if the array is already sorted
 ### 3 Add Two Numbers
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.

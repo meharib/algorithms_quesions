@@ -11,15 +11,31 @@ public class TwoSumsTest {
     public void testTwoSum_1() throws Exception {
         TwoSums twoSums = new TwoSums();
         int[] input = {2,7,11,15};
-        int[] result = twoSums.twoSum(input, 9);
-        assertArrayEquals(result, new int[]{0, 1});
+        int[] result = twoSums.option1(input, 9);
+        assertArrayEquals(result, new int[]{2, 7});
     }
 
     @Test
     public void testTwoSum_2() throws Exception {
         TwoSums twoSums = new TwoSums();
         int[] input = {3,2,4};
-        int[] result = twoSums.twoSum(input, 6);
-        assertArrayEquals(result, new int[]{1, 2});
+        int[] result = twoSums.option1(input, 6);
+        assertArrayEquals(result, new int[]{2, 4});
+    }
+
+    @Test
+    public void testTwoSum_3() throws Exception {
+        TwoSums twoSums = new TwoSums();
+        int[] input = {2,7,11,15};
+        int[] result = twoSums.option2(input, 9);
+        assertArrayEquals(result, new int[]{2, 7});
+    }
+
+    @Test
+    public void testTwoSum_4() throws Exception {
+        TwoSums twoSums = new TwoSums();
+        int[] input = {3,2,4};
+        int[] result = twoSums.option2(input, 6);
+        assertArrayEquals(result, new int[]{2, 4});
     }
 }
