@@ -25,6 +25,7 @@
     - [Check Water Flows](#1-check-water-flows---graph-solution)
     - [Shortest Path](#2-shortest-path-from-police-station-to-town)
     - [Valid Path](#3-valid-path)
+    - [BFS Implementation](#4-bfs-implementation)
 - [Union Find](#union-find)
     - [Baby Names](#1-baby-names)
 - [Sorting](#sorting)
@@ -360,7 +361,11 @@ Solution
 - Run BFS to see if we can access the end point starting from origin
 [Solution](src/main/java/graph/GraphValidPath.java) <br> 
 
-
+### 4 BFS implementation
+Solution
+    - uses queue
+    - keep track of the visited nodes in a separate set
+    [Solution](src/main/java/graph/BFSImplementation.java) <br> 
 ## Union find<br>
 ### 1 Baby Names<br>
 Each year, the government releases a list of the 10000 most common baby names and their frequencies (the number of babies with that name). The only problem with this is that some names have multiple spellings. For example, "John" and "Jon" are essentially the same name but would be listed separately in the list. Given two lists, one of names/frequencies and the other of pairs of equivalent names, write an algorithm to print a new list of the true frequency of each name. Note that if John and Jon are synonyms, and Jon and Johnny are synonyms, then John and Johnny are synonyms. (It is both transitive and symmetric.) In the final list, any name can be used as the "real " name.
