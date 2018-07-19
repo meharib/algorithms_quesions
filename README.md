@@ -289,7 +289,7 @@ input {{1,0,0,1},
        {1,0,1,0}}
 output: false
 ```
-[Solution](src/main/java/FlowCheckerWithGraph.java)<br>
+[Solution](src/main/java/graph/FlowCheckerWithGraph.java)<br>
 Solution Approach 
 - the problem can be converted to into a graph connectivity.
 - we constract a graph such that
@@ -334,7 +334,7 @@ Output :
 Solution:
 The information can be represented as a graph. Then we can run Dijkstra Algorithm from the vertices that represent the police station.
 Dijkstra requies O(|V|+|E|)log(|V|) time because it uses a priority queue which requires log(|V|) time for lookup.<br>
-[Solution](src/main/java/ShortestPathFromPoliceStation.java) <br>
+[Solution](src/main/java/graph/ShortestPathFromPoliceStation.java) <br>
 
 ### 3 Valid Path<br>
 There is a rectangle with left bottom as  (0, 0) and right up as (x, y). There are N circles such that their centers are inside the rectangle. 
@@ -358,7 +358,7 @@ Solution
 - Convert the rectangle into a graph
 - Exclude all vertices that are covered by the circle areas
 - Run BFS to see if we can access the end point starting from origin
-[Solution](src/main/java/GraphValidPath.java) <br> 
+[Solution](src/main/java/graph/GraphValidPath.java) <br> 
 
 
 ## Union find<br>

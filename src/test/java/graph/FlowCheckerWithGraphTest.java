@@ -1,3 +1,6 @@
+package graph;
+
+import graph.FlowCheckerWithGraph;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
