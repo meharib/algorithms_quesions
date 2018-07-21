@@ -27,6 +27,7 @@
     - [Valid Path](#3-valid-path)
     - [BFS Implementation](#4-bfs-implementation)
     - [Level Order Tranversal](#5-level-order-traversal)
+    - [DFS Implementation](#6-dfs-implementation)
 
 - [Union Find](#union-find)
     - [Baby Names](#1-baby-names)
@@ -393,6 +394,13 @@ Solution
     - Since it is a tree there is no need to keep track of the visited nodes
     - We use a separate storage queue to keep track of level
 [Solution](src/main/java/graph/LevelOrderTraversal.java) <br> 
+
+### 6 DFS Implementation 
+Solution:
+  option 1: using stacks
+  option 2: using recursive call to explore
+  [Solution](src/main/java/graph/DFSImplementation.java) <br> 
+
 ## Union find<br>
 ### 1 Baby Names<br>
 Each year, the government releases a list of the 10000 most common baby names and their frequencies (the number of babies with that name). The only problem with this is that some names have multiple spellings. For example, "John" and "Jon" are essentially the same name but would be listed separately in the list. Given two lists, one of names/frequencies and the other of pairs of equivalent names, write an algorithm to print a new list of the true frequency of each name. Note that if John and Jon are synonyms, and Jon and Johnny are synonyms, then John and Johnny are synonyms. (It is both transitive and symmetric.) In the final list, any name can be used as the "real " name.
