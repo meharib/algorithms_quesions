@@ -28,6 +28,7 @@
     - [BFS Implementation](#4-bfs-implementation)
     - [Level Order Tranversal](#5-level-order-traversal)
     - [DFS Implementation](#6-dfs-implementation)
+    - [Island Count](#7-island-count)
 
 - [Union Find](#union-find)
     - [Baby Names](#1-baby-names)
@@ -400,7 +401,14 @@ Solution:
   option 1: using stacks
   option 2: using recursive call to explore
   [Solution](src/main/java/graph/DFSImplementation.java) <br> 
-
+### 7 Island Count
+Solution:
+    - with a double loop iterating over all elements, 
+    - if we get a 1 flag it as visited by changing its value to -1 and flag all neighboring cells
+    - we have to options to flag neighbouring cells
+        - option 1: use dfs/bfs with a stack or a queue to visit all the neighbours in four directions
+        - option 2: use recursive call to explore the neighbours
+    [Solution](src/main/java/graph/IslandCount.java) <br>     
 ## Union find<br>
 ### 1 Baby Names<br>
 Each year, the government releases a list of the 10000 most common baby names and their frequencies (the number of babies with that name). The only problem with this is that some names have multiple spellings. For example, "John" and "Jon" are essentially the same name but would be listed separately in the list. Given two lists, one of names/frequencies and the other of pairs of equivalent names, write an algorithm to print a new list of the true frequency of each name. Note that if John and Jon are synonyms, and Jon and Johnny are synonyms, then John and Johnny are synonyms. (It is both transitive and symmetric.) In the final list, any name can be used as the "real " name.
