@@ -296,13 +296,12 @@ output: false
 ```
 [Solution](src/main/java/graph/FlowCheckerWithGraph.java)<br>
 Solution Approach 
-- the problem can be converted to into a graph connectivity.
-- we constract a graph such that
--  Each element in the matrix can be represented by a vertex
-- from each vertex we add edges(maximum 4) if there are the neighbouring vertices have value 1
-- we add a start vertex at the top and end vertex at the bottom and connect the top and the bottom rows 
-- note that since this is undirected graph we add the edges both ways for the bottom and the two rows 
--Then we run either breadth first search or, depth first search to check if there is a connectivity between the start and the end vertex
+    - the problem can be converted to into a graph connectivity.
+    - each cell with a value of 1 is considered as a vertex.
+    - neigboring cells in all four directions are considered as adjcent vertices. 
+    - whenever we visited a vertex we change its value to -1 to flag it as visited
+    - we iterate only over the top row and do a dfs when we get a cell value of 1
+    - if the dfs exploration reach the bottom row we stop otherwise we continue until we exhaust all options
 <br>
 
 ### 2 Shortest Path from police station to town<br>
