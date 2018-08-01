@@ -48,6 +48,7 @@
     - [Reverse Integer](#5-reverse-integer)
     - [Shortest Palindrome](#6-shortest-palindrome)
     - [String to Number - atoi](#7-string-to-number---atoi)
+    - [Array Quadrants](#8-array-quadrants)
 
 ## Backtracking
 
@@ -625,3 +626,17 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
              Thefore INT_MIN (−231) is returned.
 
 ```
+### 8 Array Quadrants<br>
+Given an unsorted array of integers arr and a number s, write a function findArrayQuadruplet 
+that finds four numbers (quadruplet) in arr that sum up to s. Your function should return an 
+array of these numbers in an ascending order. If such a quadruplet doesn’t exist, return an 
+empty array.
+
+Solution<br>
+- with a brute force approach we can get O(n^4)
+- we can improve this to O(n^3) by finding the first two with brute force the the last two in O(n) time.
+- we start by sorting the array, this takes a maximum O(nlogn) time
+- in a sorted array we can find the sum of two numbers that adds up to a target in O(n):
+- to do this we can use two counters i, j at the beginning and end of the array
+- then increment or decrement the array based on the result of the current sum.
+[Solution](src/main/java/miscellaneous/ArrayQuadrants.java)<br>
