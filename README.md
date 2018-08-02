@@ -29,6 +29,8 @@
     - [Level Order Tranversal](#5-level-order-traversal)
     - [DFS Implementation](#6-dfs-implementation)
     - [Island Count](#7-island-count)
+    - [Sales Path](#8-sales-path)
+    
 
 - [Union Find](#union-find)
     - [Baby Names](#1-baby-names)
@@ -408,7 +410,48 @@ Solution:
     - we have to options to flag neighbouring cells
         - option 1: use dfs/bfs with a stack or a queue to visit all the neighbours in four directions
         - option 2: use recursive call to explore the neighbours
-    [Solution](src/main/java/graph/IslandCount.java) <br>     
+    [Solution](src/main/java/graph/IslandCount.java) <br> 
+### 8 Sales Path
+The car manufacturer Honda holds their distribution system in the form of a tree (not necessarily binary). 
+The root is the company itself, and every node in the tree represents a car distributor that receives cars 
+from the parent node and ships them to its children nodes. The leaf nodes are car dealerships that sell cars 
+direct to consumers. In addition, every node holds an integer that is the cost of shipping a car to it.
+Honda wishes to find the minimal Sales Path cost in its distribution tree. Given a node rootNode, write a function 
+getCheapestCost that calculates the minimal Sales Path cost in the tree.
+The node class is defined is below
+```
+  static class Node {  
+    int cost;
+    Node[] children;
+    Node parent;
+
+    Node(int cost) {
+      this.cost = cost;
+      children = null;
+      parent = null;
+    }
+  }
+  
+  Example
+       0
+    /  |  \
+   5   3    6
+  /   / \  / \
+ 4   2  0 1  5
+    /   /
+   1   10
+  /
+ 1 
+
+The shortest path is  0->3->0->10 with a total of 13
+```
+
+Solution
+- for each node that is connected to the root node run a dfs
+- use a recursive explore method for the dfs. Using a Stack data structure is possible but the recursive call is simpler
+- notice the pattern used to manage the returns from different recursive calls
+[Solution](src/main/java/graph/ShortestSalesPath.java) <br> 
+
 ## Union find<br>
 ### 1 Baby Names<br>
 Each year, the government releases a list of the 10000 most common baby names and their frequencies (the number of babies with that name). The only problem with this is that some names have multiple spellings. For example, "John" and "Jon" are essentially the same name but would be listed separately in the list. Given two lists, one of names/frequencies and the other of pairs of equivalent names, write an algorithm to print a new list of the true frequency of each name. Note that if John and Jon are synonyms, and Jon and Johnny are synonyms, then John and Johnny are synonyms. (It is both transitive and symmetric.) In the final list, any name can be used as the "real " name.
