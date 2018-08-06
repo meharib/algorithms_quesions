@@ -51,6 +51,8 @@
     - [Shortest Palindrome](#6-shortest-palindrome)
     - [String to Number - atoi](#7-string-to-number---atoi)
     - [Array Quadrants](#8-array-quadrants)
+    - [Container With Most Water](#9-container-with-most-water)
+    
 
 ## Backtracking
 
@@ -683,3 +685,17 @@ Solution<br>
 - to do this we can use two counters i, j at the beginning and end of the array
 - then increment or decrement the array based on the result of the current sum.
 [Solution](src/main/java/miscellaneous/ArrayQuadrants.java)<br>
+###9 Container With Most Water
+Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). 
+n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). 
+Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+This is the same as the maximum rectangle we can form by using the two vertical lines, the x axis and another horizontal line.
+
+Solution<br>
+- The maximum contained area between any two vertical lines is calculated as Min(line1, line2) * line1x cordinate - line2 x cordinate
+- with a brute force approach we can get o(n^2) time by trying a combination of each two line
+- we can get O(n) solution by following this approach
+    - use two counters i and j for the left and the right
+    - if the left line is shorter than the right one increment i otherwise decrement j
+    -This logic works because intuitively we can improve the current area by always looking for a line with higher distance.<br>
+[Solution](src/main/java/miscellaneous/ContainerWithMostWater.java)<br>
