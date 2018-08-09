@@ -41,6 +41,8 @@
     - [Given a sorted matrix and a number verify if the number exists](###1-given-a-sorted-matrix-and-a-number-verify-if-the-number-exists)
     - [Find Duplicates](#2-find-duplicates)
     - [Divide Two Integers](#3-divide-two-integers)
+    - [Find Target In Rotated Sorted Array](#4-find-target-in-rotated-sorted-array)
+    
 - [Miscellaneous](#miscellaneous)
     - [Shortest Unique Substring](#1-shortest-unique-substring)
     - [Two Sums](#2-two-sums)
@@ -557,6 +559,25 @@ Solution
 - to handle the last remaineder we recursively call the same function with the remainder and the denominator 
 [Solution](src/main/java/binarysearch/DivideTwoIntegers.java) <br> 
 
+### 4 Find Target In Rotated Sorted Array
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., 0,1,2,4,5,6,7 might become 4,5,6,7,0,1,2).
+
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+You may assume no duplicate exists in the array.
+Your algorithm's runtime complexity must be in the order of O(log n).
+
+Example 1:
+
+Input: nums = 4,5,6,7,0,1,2, target = 0
+Output: 4
+
+Solution
+- we can find the pivot index where the array is rotated in O(log n) time.
+- the algorithm for finding the pivot involves piking the middle element and comparing it with the start and the end element of the array
+- if x[i]<x[0] we search on the left side. otherwise we search on the right side. ifx[i-1]>x[i] then we found the pivot.
+- once we found the pivot we do a binary search either to the left or the right of the pivot by comparing the target value to the end elements
+[Solution](src/main/java/binarysearch/FindTargetInRotatedSortedArray.java) <br> 
 
 ## Miscellaneous<br>
 ### 1 Shortest Unique Substring
