@@ -30,8 +30,6 @@
     - [DFS Implementation](#6-dfs-implementation)
     - [Island Count](#7-island-count)
     - [Sales Path](#8-sales-path)
-    
-
 - [Union Find](#union-find)
     - [Baby Names](#1-baby-names)
 - [Sorting](#sorting)
@@ -42,6 +40,7 @@
 - [Binary Search](#binary-search)
     - [Given a sorted matrix and a number verify if the number exists](###1-given-a-sorted-matrix-and-a-number-verify-if-the-number-exists)
     - [Find Duplicates](#2-find-duplicates)
+    - [Divide Two Integers](#3-divide-two-integers)
 - [Miscellaneous](#miscellaneous)
     - [Shortest Unique Substring](#1-shortest-unique-substring)
     - [Two Sums](#2-two-sums)
@@ -530,7 +529,35 @@ Solution:
     - if the element at i is less than j increment i only
     - if the element at j is less increment only j
     - running time is o(n + m)
-[Solution](src/main/java/binarysearch/FindDuplicates.java) <br>    
+[Solution](src/main/java/binarysearch/FindDuplicates.java) <br>  
+
+### 3 Divide Two Integers
+Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.
+Return the quotient after dividing dividend by divisor.
+The integer division should truncate toward zero.
+Example 1:
+Input: dividend = 10, divisor = 3
+Output: 3
+
+Example 2:
+Input: dividend = 7, divisor = -3
+Output: -2
+Note:
+Both dividend and divisor will be 32-bit signed integers.
+The divisor will never be 0.
+Assume we are dealing with an environment which could only store integers within 
+the 32-bit signed integer range: [−2^31,  2^31 − 1]. 
+For the purpose of this problem, assume that your function returns 2^31 − 1 when the division result overflows.
+
+Solution
+- to deal with edge cases and integer overflow convert the inputs to long and store the sign separately
+- the general algorithm is repeat while n*denominator<=numerator
+- since multiplication is not allowed we do this via addition
+- for performance improvement instead of incrementing n by 1 we can do as a factor of 2 like 1,2,4,8,16...
+- to handle the last remaineder we recursively call the same function with the remainder and the denominator 
+[Solution](src/main/java/binarysearch/DivideTwoIntegers.java) <br> 
+
+
 ## Miscellaneous<br>
 ### 1 Shortest Unique Substring
 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
