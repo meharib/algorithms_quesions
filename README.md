@@ -39,7 +39,7 @@
     - [Interval Sorting](#2-interval-sorting)
     - [Pancake Sorting](#3-pancake-sorting)
     - [Bubble Sorting](#4-bubble-sorting)
-- [Searching](#searching)
+- [Binary Search](#binary-search)
     - [Given a sorted matrix and a number verify if the number exists](###1-given-a-sorted-matrix-and-a-number-verify-if-the-number-exists)
     - [Find Duplicates](#2-find-duplicates)
 - [Miscellaneous](#miscellaneous)
@@ -507,13 +507,13 @@ Bubble sort implementation
 - repeat this until all elements are ordered
 [Solution](src/main/java/sorting/BubbleSort.java)
 
-## Searching<br>
+## Binary Search<br>
 ### 1 Given a sorted matrix and a number verify if the number exists
 Solution<br>
 - Treat the matrix like a single array and do binary search to find the element.
 - given the position of the element it is possible to decode it into i,j position on the matrix
 <br>
-[Solution](src/main/java/searching/SearchSortedMatrix.java) <br>
+[Solution](src/main/java/binarysearch/SearchSortedMatrix.java) <br>
 
 ### 2 Find duplicates
 Given two sorted arrays arr1 and arr2 of integers, 
@@ -530,7 +530,7 @@ Solution:
     - if the element at i is less than j increment i only
     - if the element at j is less increment only j
     - running time is o(n + m)
-[Solution](src/main/java/searching/FindDuplicates.java) <br>    
+[Solution](src/main/java/binarysearch/FindDuplicates.java) <br>    
 ## Miscellaneous<br>
 ### 1 Shortest Unique Substring
 Given an array of unique characters arr and a string str, Implement a function getShortestUniqueSubstring that finds the smallest substring of str containing all the characters in arr. Return "" (empty string) if such a substring doesn’t exist.
