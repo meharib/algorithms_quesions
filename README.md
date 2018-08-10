@@ -42,6 +42,7 @@
     - [Find Duplicates](#2-find-duplicates)
     - [Divide Two Integers](#3-divide-two-integers)
     - [Find Target In Rotated Sorted Array](#4-find-target-in-rotated-sorted-array)
+    - [First and Last Position of Element in Sorted Array](#5-first-and-last-position-of-element-in-sorted-array)
     
 - [Miscellaneous](#miscellaneous)
     - [Shortest Unique Substring](#1-shortest-unique-substring)
@@ -578,6 +579,24 @@ Solution
 - if x[i]<x[0] we search on the left side. otherwise we search on the right side. ifx[i-1]>x[i] then we found the pivot.
 - once we found the pivot we do a binary search either to the left or the right of the pivot by comparing the target value to the end elements
 [Solution](src/main/java/binarysearch/FindTargetInRotatedSortedArray.java) <br> 
+
+### 5 First and Last Position of Element in Sorted Array
+Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
+Your algorithm's runtime complexity must be in the order of O(log n).
+If the target is not found in the array, return [-1, -1].
+```
+Example:
+
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+
+```
+Solution
+- do a binary search to find the starting index. 
+- The regular binary search should be modified such that we consider an index to be a starting index if nums[i]==target and nums[i-1]< nums[i] or i-1=0
+- once the starting index is found find the ending index on the array range nums[startingIndex+1 ... end]<br>
+[Solution](src/main/java/binarysearch/FirstAndLastPosition.java) <br> 
+
 
 ## Miscellaneous<br>
 ### 1 Shortest Unique Substring
