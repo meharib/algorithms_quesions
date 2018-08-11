@@ -54,6 +54,7 @@
     - [String to Number - atoi](#7-string-to-number---atoi)
     - [Array Quadrants](#8-array-quadrants)
     - [Container With Most Water](#9-container-with-most-water)
+    - [Matrix Spiral Copy](#10-matrix-spiral-copy)
     
 
 ## Backtracking
@@ -766,3 +767,22 @@ Solution<br>
     - if the left line is shorter than the right one increment i otherwise decrement j
     -This logic works because intuitively we can improve the current area by always looking for a line with higher distance.<br>
 [Solution](src/main/java/miscellaneous/ContainerWithMostWater.java)<br>
+
+###10 Matrix Spiral Copy
+Given a 2D array (matrix) inputMatrix of integers, create a function spiralCopy that copies inputMatrix’s values into a 1D array in a spiral order, clockwise. Your function then should return that array. Analyze the time and space complexities of your solution.
+Example given input 
+1,2,3
+4,5,6
+7,8,9
+output: [1,2,3,6,9,8,7,4,5]
+Solution<br>
+- notice the pattern how rows and columns are alternating 
+    - the first row is traversed from left to right then the last row is traversed from right to left and so on
+    - the last column is traversed from top to bottom then the first column is traversed from bottom to top
+- to keep track of this pattern we use four pointers
+    - topRow, bottomRow, leftCol, rightCol
+    - we run a while loop while the topRow<=bottomRow && leftCol <=rightCol
+    - at each iteration we take turns to iterate over elements by fixing the row and the column alternatively
+    - when the topRow is fixed we traverse from left to right, when the bottomRow is fixed we traverse from right to left
+    - when the rightCol is fixed we traverse from top to bottom, when the leftCol is fixed we traverse from bottom to top <br>
+[Solution](src/main/java/miscellaneous/MatrixSpiralCopy.java)<br>
