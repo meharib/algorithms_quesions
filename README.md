@@ -43,6 +43,7 @@
     - [Divide Two Integers](#3-divide-two-integers)
     - [Find Target In Rotated Sorted Array](#4-find-target-in-rotated-sorted-array)
     - [First and Last Position of Element in Sorted Array](#5-first-and-last-position-of-element-in-sorted-array)
+    - [Find Minimum In Rotated Sorted Array with Duplicates](#6-find-minimum-in-rotated-sorted-array-with-duplicates)
     
 - [Miscellaneous](#miscellaneous)
     - [Shortest Unique Substring](#1-shortest-unique-substring)
@@ -597,7 +598,29 @@ Solution
 - The regular binary search should be modified such that we consider an index to be a starting index if nums[i]==target and nums[i-1]< nums[i] or i-1=0
 - once the starting index is found find the ending index on the array range nums[startingIndex+1 ... end]<br>
 [Solution](src/main/java/binarysearch/FirstAndLastPosition.java) <br> 
+###6 Find Minimum In Rotated Sorted Array With Duplicates
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
+(i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
+
+Find the minimum element. The array may contain duplicates.
+```
+Example:
+Input: [2,2,2,0,1]
+Output: 0
+```
+
+Solution <br>
+- With binary search approach we can get a best case scenario of O(log n) and worst case scenario of O(n)
+- This binary search approach is
+- add to indexes for the start and the end of the array and we run a while loop while the start is less than or equal to the end
+- if the start element is less than the end, the array is already sorted so we return the start element
+- if the start equals the end, that means we only have one element to consider there fore we return the start
+- if the middle element is bigger than the start, we already know that the end element is greater than the start therefore we can move the start to the middle
+- if the middle element is smaller than the end, we can move the end to the middle because we are looking for the smallest element
+- if either the end or the start are equal to the middle element we can move the start or the end by one index as duplicates has no use <br>
+
+[Solution](src/main/java/binarysearch/FindMinInRotatedArrayWithDups.java) <br> 
 
 ## Miscellaneous<br>
 ### 1 Shortest Unique Substring
