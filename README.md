@@ -44,6 +44,7 @@
     - [Find Target In Rotated Sorted Array](#4-find-target-in-rotated-sorted-array)
     - [First and Last Position of Element in Sorted Array](#5-first-and-last-position-of-element-in-sorted-array)
     - [Find Minimum In Rotated Sorted Array with Duplicates](#6-find-minimum-in-rotated-sorted-array-with-duplicates)
+    - [Three Sum](#7-three-sum)
     
 - [Miscellaneous](#miscellaneous)
     - [Shortest Unique Substring](#1-shortest-unique-substring)
@@ -622,6 +623,26 @@ Solution <br>
 - if either the end or the start are equal to the middle element we can move the start or the end by one index as duplicates has no use <br>
 
 [Solution](src/main/java/binarysearch/FindMinInRotatedArrayWithDups.java) <br> 
+
+###7 Three Sum
+Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+Note:The solution set must not contain duplicate triplets
+
+Example:
+Given array nums = [-1, 0, 1, 2, -1, -4],
+
+A solution set is:
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+
+Solution <br>
+- This problem can be converted in to a three sum problem. a + b + c =0 can be written as -a = b + c.
+- Therefore we iterate over each element and check if there is two sum with a target of -a
+- To handle the duplicates, if nums[i-1]==nums[i] then we move on until we get an element that is different. We do this for both the two sum and the tree sum cases
+
+[Solution](src/main/java/binarysearch/ThreeSum.java) <br> 
 
 ## Miscellaneous<br>
 ### 1 Shortest Unique Substring
