@@ -492,7 +492,8 @@ Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
 ```
 
 Solution<br>
-First sort the intervals by their start, then starting from the first interval try to merge them
+First sort the intervals by their start, then starting from the first interval try to merge them.
+Tip: Instead of checking if they are overlapping it is easier to check if they are disjoint 
 [Solution](src/main/java/sorting/IntervalSorting.java) <br>
 
 ### 3 Pancake Sorting

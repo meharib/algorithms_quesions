@@ -18,37 +18,33 @@ public class IntervalSorting {
     }
 
     public List<Interval> merge(List<Interval> intervals) {
+        if(intervals==null || intervals.size()<=1){
+            return intervals;
+        }
         List<Interval> result = new ArrayList<Interval>();
         intervals.sort((i1, i2) -> i1.start - i2.start);
-        while(!intervals.isEmpty()){
-            Interval current = intervals.remove(0);
-            List<Interval> toBeMerged = new ArrayList<Interval>();
-            for(Interval interval: intervals){
-                if(isOverlapBothWay(current, interval)){
-                    toBeMerged.add(interval);
-                    current=merge(current,interval);
-                }
-            }
-            for (Interval interval : toBeMerged) {
-                intervals.remove(interval);
-            }
-            result.add(current);
 
+        Interval current = intervals.remove(0);
+        while(!intervals.isEmpty()){
+            if(isDisjoint(current, intervals.get(0))){
+                result.add(current);
+                current=intervals.remove(0);
+            }else{
+                current = merge(current,intervals.remove(0));
+            }
         }
+        result.add(current);
         return result;
     }
 
-    private boolean isOverlapBothWay(Interval i, Interval j){
-        return overlapsOneWay(i,j) || overlapsOneWay(j,i);
-    }
-    private boolean overlapsOneWay(Interval i, Interval j){
-        return isBetween(i.start, j.start,j.end) || isBetween(i.end,j.start,j.end);
+
+    private Interval merge(Interval i, Interval j){
+        i.start = Math.min(i.start, j.start);
+        i.end = Math.max(i.end, j.end);
+        return i;
     }
 
-    private boolean isBetween(int i, int j, int k){
-        return j<=i && i<=k;
-    }
-    private Interval merge(Interval i, Interval j){
-        return new Interval(Math.min(i.start, j.start), Math.max(i.end,j.end));
+    private boolean isDisjoint(Interval i1, Interval i2){
+        return i1.end < i2.start;
     }
 }
