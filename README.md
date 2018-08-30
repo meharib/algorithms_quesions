@@ -638,7 +638,7 @@ A solution set is:
 ]
 
 Solution <br>
-- This problem can be converted in to a three sum problem. a + b + c =0 can be written as -a = b + c.
+- This problem can be converted in to a two sum problem. a + b + c =0 can be written as -a = b + c.
 - Therefore we iterate over each element and check if there is two sum with a target of -a
 - To handle the duplicates, if nums[i-1]==nums[i] then we move on until we get an element that is different. We do this for both the two sum and the tree sum cases
 
